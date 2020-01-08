@@ -1,0 +1,63 @@
+drop database project;
+create database project;
+use project;
+create table PhyTb1
+(
+RegNo int(10)primary key,
+standard int(5)not null,
+section varchar(25)not null,
+DateOfLab date not null,
+NoOfApp int(10)not null,
+ExpPerform varchar(40)not null
+);
+Insert into PhyTb1 values(1,9,’A1’,’2012-08-2’,45,’Unknown Resistance’);
+Insert into PhyTb1 values(2,9,’A2’,’2012-08-2’,40,’Unknown Resistance’);
+Insert into PhyTb1 values(3,10,’A1’,’2012-08-3’,40,’Screw Gauge’);
+Insert into PhyTb1 values(4,10,’A2',’2012-08-3’,35,’Vernier calliper’);
+Insert into PhyTb1 values(5,11,’A1’,’2012-08-4’,30,’Viscous fluid’);
+Insert into PhyTb1 values(6,12,’A1’,’2012-08-5’,28,’Meter bridge’);
+create table PhyTb2
+(
+Customerno int(5)primary key,
+PackName varchar(35)not null,
+CName varchar(25)not null,
+NoOfInstument int(10)not null,
+PerCost float not null,
+dateOfEntry date not null,
+TotalTransact double not null
+);
+insert into PhyTb2 values(1,’Vernier calliper’,’Vernier Manufact’,45,100,’2010-07-01’,4500);
+insert into PhyTb2 values(2,’Screw gauge’,’Screw ltd’,40,94,’2010-07-05’,3760);
+insert into PhyTb2 values(3,’Meter bridge’,’Meter Bridge Stars ’,30,295,’2012-01-02’,8850);
+insert into PhyTb2 values(4,’Galvanometer’,’Galvano ltd’,25,70,’2013-04-02’,1750);
+insert into PhyTb2 values(5,’Ammeter’,’Ammeters manufact’,35,75,’2014-08-21’,2625);
+create table ChemTb1
+(
+RegNo int(10) primary key,
+standard int(5)not null,
+section varchar(25)not null,
+DateOfLab date not null,
+NoOfApp int(10)not null,
+ExpPerform varchar(40) not null
+);
+Insert into ChemTb1 values(1,9,’A1’,’2012-08-05’,30,’Salt analysis(CuSO4)’);
+Insert into ChemTb1 values(2,9,’A2’,’2012-08-05’,33,’Salt analysis(Na2SO4)’);
+Insert into ChemTb1 values(3,10,’A1’,’2012-08-07’,29,’Salt analysis(NH4Cl)’);
+Insert into ChemTb1 values(4,10,’A2’,’2012-08-07’,30,’Salt analysis(NaCl)’);
+Insert into ChemTb1 values(5,11,’A1’,’2012-08-15’,30,’titration’);
+Insert into ChemTb1 values(6,12,’A1’,’2012-08-15’,28,’Chromatography’);
+create table ChemTb2
+(
+Customerno int(5)primary key,
+PackName varchar(35),
+CName varchar(25)not null,
+NoOfInstument int(10)not null,
+PerCost float not null,
+dateOfEntry date not null,
+TotalTransact double not null
+);
+insert into ChemTb2 values(1,’Test tubes’,’ICL Limited’,50,50,’2010-02-03’,2500);
+insert into ChemTb2 values(2,’Capillary tubes’,’Equipments  Ltd’,40,94,’2013-05-07’,3760);
+insert into ChemTb2 values(3,’Dropper’,’Micro Manufacture’,30,35,’2014-02-03’,1050);
+insert into ChemTb2 values(4,’Funnel Stand’,’Chem Laboratory’,25,70,’2015-02-04’,1750);
+insert into ChemTb2 values(5,’Gas Detector’,’Chem Manufact’,35,75,’2013-05-09’,2625);
